@@ -1,12 +1,14 @@
-//main funciton; passes user input; uses validator and arrayMaker
-var pingpong = function(integer) {
+//Business logic
+
+
+var pingpong = function(integer) { //main funciton;
   var result = validator(integer);
 
   return arrayMaker(integer, result);
 };
 
-//passes user's number and creates array
-var arrayMaker = function(integer, result) {
+
+var arrayMaker = function(integer, result) { //passes user's number and creates array
   if (result) {
     var results = [];
     var i = 1;
@@ -21,8 +23,8 @@ var arrayMaker = function(integer, result) {
   }
 };
 
-//checks to make sure input is a valid number
-var validator = function(integer) {
+
+var validator = function(integer) { //checks to make sure input is a valid number
   if (integer < 0) {
     return false;
   } else if (integer = NaN) { //supposed to determine if input is a number BUT IT DOESN'T
@@ -45,6 +47,7 @@ var pingponger = function(integer) { //determines whether the numbers between 0 
     }
 };
 
+//UI logic
 $(document).ready(function() {
   $("form#userForm").submit(function(event) {
     var input = parseInt($("input#userInput").val());
