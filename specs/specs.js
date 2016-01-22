@@ -6,4 +6,9 @@ describe ("pingpong", function() {
   it("takes input divisible by 15 and returns 'pingpong'", function() {
     expect(pingpong(15)).to.equal("pingpong");
   });
+
+  it("takes input divisible by 5 and returns 'pong'", function() {
+    expect(pingpong(5)).to.equal("pong");
+  });
+
 });
