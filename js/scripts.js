@@ -1,13 +1,27 @@
-var pingpong = function(i) {
-  // while (i = 0; i <= userInput; i++){
+var pingpong = function(integer) {
+  var arr = [];
+  for (var i = 0; i <= integer) {
     if (i % 15 === 0) {
-      return "pingpong";
+      arr.push("pingpong");
     } else if (i % 5 === 0) {
-      return "pong";
+      arr.push("pong");
     } else if (i % 3 === 0) {
-      return "ping";
+      arr.push("ping");
     } else {
-      return i;
+      arr.push(i);
     }
-  //}
+    i++;
+  }
+  return arr;
 }
+
+
+$(document).ready(function() {
+  $("form#userForm").submit(function(event) {
+    var integer = parseInt($("input#userInput")).val();
+    var result = pingpong(integer);
+
+    $("#output").text(result);
+    event.preventDefault();
+  });
+});
