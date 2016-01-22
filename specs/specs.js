@@ -24,12 +24,12 @@ describe("validator", function() {
 
 describe("arrayMaker", function() {
   it("passes true results from 'validator' and 'pingponger' and creates an array; passes each element to a new line", function() {
-    expect(arrayMaker(3, true)).to.equal("1/\\n/2/\\n/ping");
+    expect(arrayMaker(3, true)).to.equal("1\n2\nping");
   });
 });
 
 describe("pingpong", function() {
   it("passes user input; uses validator and arrayMaker to return values", function() {
-    expect(pingpong(5, true)).to.equal("1/\\n/2/\\n/ping/\\n/4/\\n/pong");
+    expect(pingpong(5, true)).to.equal("1\n2\nping\n4\npong");
   });
 });

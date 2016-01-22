@@ -15,7 +15,7 @@ var arrayMaker = function(integer, result) {
       results.push(result);
       i++;
     }
-    return results.join(/\n/);
+    return results.join("\n");
   } else {
     return "NAH";
   }
