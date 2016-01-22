@@ -1,14 +1,38 @@
+* {
+  margin: 0;
+}
+
+html, body, .container {
+  height: 100%;
+}
+
 .result {
   display: none;
   width: 2px;
 }
 
-#left {
-  background-color: #999966
-  height: auto;
+.container {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+.container:after {
+  content: "";
+  display: block;
 }
 
-#right {
+.footer, .container:after {
+  height: 50px;
+}
+
+.footer {
+  text-align: center;
+}
+
+
+
+#sidebar {
+  background-color: #999966;
+  min-height: 100%;
 
 }
 .jumbotron {
