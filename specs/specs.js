@@ -11,4 +11,7 @@ describe ("pingpong", function() {
     expect(pingpong(5)).to.equal("pong");
   });
 
+  it("takes input divisible by 3 and returns 'pong'", function() {
+    expect(pingpong(3)).to.equal("ping");
+  });
 });
