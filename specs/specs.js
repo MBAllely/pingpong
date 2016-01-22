@@ -1,17 +1,35 @@
-describe ("pingpong", function() {
+describe ("pingponger", function() {
   it("takes input not divisible by 5 or 3 and returns the same input", function(){
-    expect(pingpong(1)).to.equal(1);
+    expect(pingponger(1)).to.equal(1);
   });
 
   it("takes input divisible by 15 and returns 'pingpong'", function() {
-    expect(pingpong(15)).to.equal("pingpong");
+    expect(pingponger(15)).to.equal("pingpong");
   });
 
   it("takes input divisible by 5 and returns 'pong'", function() {
-    expect(pingpong(5)).to.equal("pong");
+    expect(pingponger(5)).to.equal("pong");
   });
 
   it("takes input divisible by 3 and returns 'pong'", function() {
-    expect(pingpong(3)).to.equal("ping");
+    expect(pingponger(3)).to.equal("ping");
+  });
+});
+
+describe("validator", function() {
+  it("determines if an input number is valid", function() {
+    expect(validator(-1)).to.equal(false);
+  });
+});
+
+describe("arrayMaker", function() {
+  it("passes true results from 'validator' and 'pingponger' and creates an array; passes each element to a new line", function() {
+    expect(arrayMaker(3, true)).to.equal("1/\\n/2/\\n/ping");
+  });
+});
+
+describe("pingpong", function() {
+  it("passes user input; uses validator and arrayMaker to return values", function() {
+    expect(pingpong(5, true)).to.equal("1/\\n/2/\\n/ping/\\n/4/\\n/pong");
   });
 });

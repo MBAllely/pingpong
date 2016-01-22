@@ -1,0 +1,46 @@
+
+
+
+var pingpong = function(integer) {
+  var result =
+}
+
+var makeArray = function(integer, result) {
+  if(result) {
+    var result = []
+}
+
+var pingponger = function(num) {
+  var arr = [];
+  for (var i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      arr.push("pingpong");
+    } else if (i % 5 === 0) {
+      arr.push("pong");
+    } else if (i % 3 === 0) {
+      arr.push("ping");
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+
+var pingponger = function(num) {
+  var arr = [];
+  for (var i = 1; i <= num; i++) {
+    if (i % 15 === 0) {
+      arr[i] = "pingpong";
+      arr.push(i);
+    } else if (i % 5 === 0) {
+      arr[i] = "pong";
+      arr.push(i);
+    } else if (i % 3 === 0) {
+      arr[i] = "ping";
+      arr.push(i);
+    } else {
+      arr.push(i);
+    }
+  }
+  return arr;
+}

@@ -1,8 +1,8 @@
-//main funciton; passes user input; uses validator and arrayMaker
-var pingpong = function(integer) {
+//main funciton; passes user input; uses pingponger and arrayMaker
+var pinpong = function(integer) {
   var result = validator(integer);
 
-  return arrayMaker(integer, result);
+  return arrayMaker(integer, result)
 };
 
 //passes user's number and creates array
@@ -10,22 +10,22 @@ var arrayMaker = function(integer, result) {
   if (result) {
     var results = [];
     var i = 1;
-    while (i <= integer) {
+    while (i <= num) {
       result = pingponger(i);
       results.push(result);
       i++;
     }
-    return results.join(/\n/);
+    return results.join("     ");
   } else {
     return "NAH";
   }
 };
 
-//checks to make sure input is a valid number
+// checks to make sure input is a valid number
 var validator = function(integer) {
   if (integer < 0) {
     return false;
-  } else if (integer = NaN) { //supposed to determine if input is a number BUT IT DOESN'T
+  } else if (!integer) {
     return false;
   } else {
     return true;
@@ -45,17 +45,17 @@ var pingponger = function(integer) { //determines whether the numbers between 0 
     }
 };
 
+
+
+
+
 $(document).ready(function() {
   $("form#userForm").submit(function(event) {
-    var input = parseInt($("input#userInput").val());
+    var input = parseInt($("input#userInput")).val();
     var result = pingpong(input);
 
-    // result.forEach(function(integer) {
-    //   $("#resultList").append("<li>" + integer + "</li>");
-    // });
 
-    $(".result").show();
-    $("#output").text(result);
+    $("#output").text("HI");
     event.preventDefault();
   });
 });

@@ -1,0 +1,18 @@
+.result {
+  display: none;
+  width: 2px;
+}
+
+#left {
+  background-color: #999966
+  height: auto;
+}
+
+#right {
+
+}
+.jumbotron {
+  text-align: center;
+  background-color: #008000;
+  color: white;
+}
