@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-html, body, .container {
+body {
   height: 100%;
 }
 
@@ -13,26 +13,20 @@ html, body, .container {
 
 .container {
   min-height: 100%;
-  margin-bottom: -50px;
-}
-.container:after {
-  content: "";
-  display: block;
-}
-
-.footer, .container:after {
-  height: 50px;
+  float: left;
 }
 
 .footer {
   text-align: center;
+  margin-top: 100em;
 }
 
 
 
 #sidebar {
   background-color: #999966;
-  min-height: 100%;
+  height: 95em;
+  padding-left: 20px;
 
 }
 .jumbotron {

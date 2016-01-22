@@ -11,15 +11,36 @@
     <div class="jumbotron">
       <h1>Ping Pong!</h1>
     </div>
-    <div class="container">
+    <div class="container"> <!--SIDEBAR-->
       <div class="row">
-        <div class="container">
+        <div class="col-xs-3" id="sidebar">
+          <h3>About Ping Ponger</h3>
+          <p>
+            Marika made it!
+          </p>
+          <p>
+            She did ok.
+          </p>
+          <p>
+            Everything but the logic was p-hard.
+          </p>
+          <p>
+            Well, except the css.  That's OK.
+          </p>
+          <h4>GitHub Username</h4>
+          <p>
+            MBAllely
+          </p>
+          <h4>Languages and tools used</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+          </ul>
+        </div>  <!--END SIDEBAR-->
 
-        </div>
-        <div class="col-xs-3" id="left">
-
-        </div>
-        <div class="col-xs-9" id="right">
+        <div class="col-xs-9" id="content"> <!--FORM START-->
           <h2>Let's play!</h2>
           <h4>Rules:</h4>
           <p>
@@ -30,13 +51,15 @@
               <li>Numbers divsisble by 15 become "pingpong"</li>
             </ol>
           </p>
+
           <form id="userForm">
             <label>Enter your number here:</label>
             <input type="text" id="userInput">
 
             <button type="submit" class="btn btn-submit">Ping Pong!</button>
 
-          </form>
+          </form> <!--END FORM-->
+
 
 
           <div class="result">
@@ -44,9 +67,19 @@
               <ul id="resultList"></ul>
               <span id="output"></span>
           </div>
+
         </div>
+        <!-- <div class="col-xs-2">
+          <img src="http://www.openpool.com.ar/wp-content/themes/twentyeleven/images/paleta-pingpong.png" alt="PINGPONG" />
+        </div> -->
       </div>
     </div>
+
+    <div class="footer center"> <!-- FOOTER -->
+      <p>
+        &#169 2016 Marika
+      </p>
+    </div> <!-- END OF FOOTER -->
 
   </body>
 </html>
